@@ -286,14 +286,11 @@ html,body{opacity:1!important;visibility:visible!important}
 .elementor-element-29469b2 .swiper-wrapper{flex-wrap:wrap;gap:15px;}
 .elementor-element-29469b2 .swiper-slide{width:100% !important;margin-right:0 !important;}
 @media(min-width:768px){.elementor-element-29469b2 .swiper-slide{width:calc(50% - 5px) !important;}}
-/* Desktop: true CSS grid (not 4 independent flex columns) so every row lines up across all 4 categories,
-   even when one item's text wraps to two lines. display:contents "flattens" the slide + its inner
-   container so the 5 item-rows of each category become direct grid children. */
+/* Desktop: each category is its own grid column with independent height, so categories
+   with fewer items don't force blank rows or misalign the ones next to them. */
 @media(min-width:1025px){
-.elementor-element-29469b2 .swiper-wrapper{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(5,minmax(70px,auto));grid-auto-flow:column;align-items:stretch;gap:10px;}
-.elementor-element-29469b2 .swiper-slide{display:contents;}
-.elementor-element-29469b2 .swiper-slide > div{display:contents;}
-.elementor-element-29469b2 .swiper-slide > div > div{height:100%;min-height:70px;box-sizing:border-box;}
+.elementor-element-29469b2 .swiper-wrapper{display:grid;grid-template-columns:repeat(4,1fr);align-items:start;gap:10px;}
+.elementor-element-29469b2 .swiper-slide > div > div{min-height:70px;box-sizing:border-box;}
 }
 /* CTA button under the cards was left-aligned (sits outside any flex container); center it */
 .elementor-element-b4a01e0{margin-left:auto !important;margin-right:auto !important;}
@@ -341,12 +338,6 @@ body.tf-areas-expanded .tf-areas-more-btn{display:none;}
 </div>
 <div class="elementor-element elementor-element-c398ae8 e-con e-atomic-element e-flexbox-base e-c398ae8-7ba4c6c" data-e-type="e-flexbox" data-element_type="e-flexbox" data-id="c398ae8" data-interaction-id="c398ae8">
 <div class="e-766f426-a1f857a e-svg-base" data-e-type="widget" data-id="766f426" data-interaction-id="766f426"><svg fill="currentColor" height="20" style="width: 100%; height: 100%; overflow: unset;" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M10 18.3333C14.6024 18.3333 18.3334 14.6023 18.3334 9.99996C18.3334 5.39759 14.6024 1.66663 10 1.66663C5.39765 1.66663 1.66669 5.39759 1.66669 9.99996C1.66669 14.6023 5.39765 18.3333 10 18.3333Z" stroke="#7B4227" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.66667"></path><path d="M7.5 10L9.16667 11.6667L12.5 8.33337" stroke="#7B4227" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.66667"></path></svg></div> <p class="e-74e7604-bd27bba e-paragraph-base" data-e-type="widget" data-id="74e7604" data-interaction-id="74e7604">Ideação Suicida</p>
-</div>
-<div class="elementor-element elementor-element-7353a89 e-con e-atomic-element e-flexbox-base e-7353a89-9f9cab9" data-e-type="e-flexbox" data-element_type="e-flexbox" data-id="7353a89" data-interaction-id="7353a89">
-<div class="e-a2ce5c7-f1f71fa e-svg-base" data-e-type="widget" data-id="a2ce5c7" data-interaction-id="a2ce5c7"><svg fill="currentColor" height="20" style="width: 100%; height: 100%; overflow: unset;" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M10 18.3333C14.6024 18.3333 18.3334 14.6023 18.3334 9.99996C18.3334 5.39759 14.6024 1.66663 10 1.66663C5.39765 1.66663 1.66669 5.39759 1.66669 9.99996C1.66669 14.6023 5.39765 18.3333 10 18.3333Z" stroke="#7B4227" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.66667"></path><path d="M7.5 10L9.16667 11.6667L12.5 8.33337" stroke="#7B4227" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.66667"></path></svg></div> <p class="e-0b6c59d-6c64e44 e-paragraph-base" data-e-type="widget" data-id="0b6c59d" data-interaction-id="0b6c59d">Neurose</p>
-</div>
-<div class="elementor-element elementor-element-59e9232 e-con e-atomic-element e-flexbox-base e-59e9232-4cbb1ba" data-e-type="e-flexbox" data-element_type="e-flexbox" data-id="59e9232" data-interaction-id="59e9232">
-<div class="e-e40407d-80f8db6 e-svg-base" data-e-type="widget" data-id="e40407d" data-interaction-id="e40407d"><svg fill="currentColor" height="20" style="width: 100%; height: 100%; overflow: unset;" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M9.99996 18.3332C14.6023 18.3332 18.3332 14.6022 18.3332 9.9999C18.3332 5.39755 14.6023 1.66662 9.99996 1.66662C5.39761 1.66662 1.66668 5.39755 1.66668 9.9999C1.66668 14.6022 5.39761 18.3332 9.99996 18.3332Z" stroke="#7B4227" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.66667"></path><path d="M7.49995 9.99998L9.16661 11.6666L12.4999 8.33332" stroke="#7B4227" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.66666"></path></svg></div> <p class="e-b073f02-1852568 e-paragraph-base" data-e-type="widget" data-id="b073f02" data-interaction-id="b073f02">Psicose</p>
 </div>
 <div class="elementor-element elementor-element-5743fd7 e-con e-atomic-element e-flexbox-base e-5743fd7-81838e1" data-e-type="e-flexbox" data-element_type="e-flexbox" data-id="5743fd7" data-interaction-id="5743fd7">
 <div class="e-75e9ab4-04fac78 e-svg-base" data-e-type="widget" data-id="75e9ab4" data-interaction-id="75e9ab4"><svg fill="currentColor" height="20" style="width: 100%; height: 100%; overflow: unset;" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M10 18.3334C14.6024 18.3334 18.3334 14.6025 18.3334 10.0001C18.3334 5.39771 14.6024 1.66675 10 1.66675C5.39765 1.66675 1.66669 5.39771 1.66669 10.0001C1.66669 14.6025 5.39765 18.3334 10 18.3334Z" stroke="#7B4227" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.66667"></path><path d="M7.5 9.99992L9.16667 11.6666L12.5 8.33325" stroke="#7B4227" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.66667"></path></svg></div> <p class="e-ee63338-2a1b5e5 e-paragraph-base" data-e-type="widget" data-id="ee63338" data-interaction-id="ee63338">Vícios e Dependências</p>
